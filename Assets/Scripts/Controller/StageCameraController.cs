@@ -42,9 +42,9 @@ public class StageCameraController : ObservableMonoBehaviour
 
         if (cameraX.HasValue)
         {
-            var pos = this.transform.position;
+            var pos = Camera.main.transform.position;
             pos.x = cameraX.Value;
-            this.transform.position = pos;
+            Camera.main.transform.position = pos;
         }
 
         base.LateUpdate();
